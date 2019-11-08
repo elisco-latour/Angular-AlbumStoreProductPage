@@ -12,10 +12,13 @@ export class ProductService {
 
   _album_url = "../assets/album.json";
 
-  constructor( private _http: Http) { }
+  constructor( private _http: Http) {
+    console.log(getAlbum(1));
+   }
 
-  getAlbum( id: int ) {
-    return this._http.get(_album_url).response.json();
+  getAlbum( id: number ) {
+    return this._http.get(_album_url).map(response.json());
+    });
   }
-  
+
 }
