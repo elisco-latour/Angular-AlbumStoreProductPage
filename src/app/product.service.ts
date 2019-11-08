@@ -23,8 +23,8 @@ export class ProductService {
     return this._http.get(this._albumUrl).map((response) => <Album>response.json());
   }
 
-  getProducts() {
-    return this._http.get(_productsUrl).map((response) => response.json());
+  getProducts(): Observable<Product[]> {
+    return this._http.get(_productsUrl).map((response) => <Product[]>response.json());
   }
 
 }
