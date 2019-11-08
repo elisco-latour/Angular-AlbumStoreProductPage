@@ -1,24 +1,22 @@
 import { Injectable } from '@angular/core';
-
+import { map } from 'rxjs/add/operator/map';
 /*
 * Own Imports
 */
-
 import { Http, Response } from '@angular/http';
-import { map } from 'rxjs/add/operator/map';
+
 
 @Injectable()
 export class ProductService {
 
-  _album_url = "../assets/album.json";
+  private _albumUrl = '../assets/album.json';
 
   constructor( private _http: Http) {
-    console.log(getAlbum(1));
+    console.log("Data service connected");
    }
 
   getAlbum( id: number ) {
-    return this._http.get(_album_url).map(response.json());
-    });
+    return this._http.get(this._albumUrl).map((response) => response.json());
   }
 
 }
