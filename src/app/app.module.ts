@@ -16,7 +16,10 @@ import { ProductTracklistingComponent } from './product-tracklisting/product-tra
 import { ProductListComponent } from './product-list/product-list.component';
 import { Routes, RouterModule } from '@angular/router';
 
-appRoutes: Routes[] = [];
+appRoutes: Routes[] = [
+  { path: 'products', component: ProductListComponent},
+  
+];
 
 @NgModule({
   declarations: [
