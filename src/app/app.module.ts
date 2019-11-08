@@ -11,13 +11,15 @@ import { ProductDescriptionComponent } from './product-description/product-descr
 * Own imports
 */
 
-import { ProductService } from './product.service'
+import { ProductService } from './product.service';
+import { ProductTracklistingComponent } from './product-tracklisting/product-tracklisting.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductPageComponent,
-    ProductDescriptionComponent
+    ProductDescriptionComponent,
+    ProductTracklistingComponent
   ],
   imports: [
     BrowserModule,
