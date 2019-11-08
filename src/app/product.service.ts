@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 * Own Imports
 */
 import { Http, Response } from '@angular/http';
-
+import { Album } from './album';
 
 @Injectable()
 export class ProductService {
