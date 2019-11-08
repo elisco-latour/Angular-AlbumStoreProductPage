@@ -15,7 +15,7 @@ export class ProductService {
     console.log("Data service connected");
    }
 
-  getAlbum( id: number ) {
+  getAlbum( id: number ): Observable<Album> {
     return this._http.get(this._albumUrl).map((response) => response.json());
   }
 
